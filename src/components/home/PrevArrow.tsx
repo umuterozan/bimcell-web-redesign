@@ -7,7 +7,7 @@ export default function PrevArrow(props: any) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "flex", alignItems: 'center', justifyContent: 'center', background: "#FF290B", width: '50px', height: '50px', borderRadius: '9999px', zIndex: '1' }}
+      style={{ ...style, display: "flex", alignItems: 'center', justifyContent: 'center', background: "#FF290B", width: '50px', height: '50px', borderRadius: '9999px', zIndex: '1', translate: '50%' }}
       onClick={onClick}
     >
       <LeftArrowIcon color="white" />
