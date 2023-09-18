@@ -83,11 +83,11 @@ export default function FaqSection() {
           {data.map((faq) => (
             <div key={faq.id}>
               <button onClick={() => openAnswer(faq.id)} className={`${faq.isOpen ? 'bg-brand' : 'bg-white'} w-full flex items-center justify-between px-5 h-[60px] rounded-2xl`}>
-                <div className={`${faq.isOpen ? 'text-white' : 'text-text-one'} text-[15px]`}>Simkart değişiklik ücreti ne kadardır?</div>
+                <div className={`${faq.isOpen ? 'text-white' : 'text-text-one'} text-[15px]`}>{faq.question}</div>
                 <div className={`${faq.isOpen ? 'rotate-180' : ''} transition-all`}><DownArrowIcon color={faq.isOpen ? 'white' : '#242424'} size="25" /></div>
               </button>
-              <div className={`${faq.isOpen ? 'max-h-[300px] p-5' : 'max-h-0 p-0'} mt-[5px] overflow-hidden transition-[max-height] bg-white rounded-2xl shadow-[0_2px_10px_-5px_rgba(0,0,0,0.25)] text-text-one text-xs`}>
-                Kimlik fotokopiniz ile en yakın BİM mağazasına uğrayınız, ilgili formları doldurup simkartınızı alınız. BİMcell Bireysel Abonelik Sözleşmesi için tıklayınız.
+              <div className={`${faq.isOpen ? 'max-h-[300px] py-5' : 'max-h-0 py-0'} mt-[5px] overflow-hidden transition-all px-5 bg-white rounded-2xl shadow-[0_2px_10px_-5px_rgba(0,0,0,0.25)] text-text-one text-xs`}>
+                {faq.answer}
               </div>
             </div>
           ))}

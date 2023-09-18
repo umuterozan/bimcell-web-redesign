@@ -1,4 +1,40 @@
 import { RightArrowIcon } from "../icons";
+import ProductCard from "../products/ProductCard";
+
+const mockData = [
+  {
+    id: 1,
+    title: "Dost Küçük",
+    minute: "750",
+    sms: "250",
+    internet: "3 GB",
+    price: "102"
+  },
+  {
+    id: 2,
+    title: "Dost Orta",
+    minute: "750",
+    sms: "250",
+    internet: "6 GB",
+    price: "115"
+  },
+  {
+    id: 3,
+    title: "Dost Büyük",
+    minute: "750",
+    sms: "250",
+    internet: "9 GB",
+    price: "133"
+  },
+  {
+    id: 4,
+    title: "Dost Mega",
+    minute: "750",
+    sms: "250",
+    internet: "15 GB",
+    price: "159"
+  },
+]
 
 export default function ProductsSection() {
   return (
@@ -12,18 +48,8 @@ export default function ProductsSection() {
           <div className="bg-white shadow-[0_2px_10px_-5px_rgba(0,0,0,0.25)] rounded-lg text-text-one font-medium px-[15px] py-[10px]">Gençlere Özel</div>
         </div>
         <div className="mt-7 flex justify-center gap-x-3">
-          {[...Array(4).keys()].map(() => (
-            <div className="product-card">
-              <h2 className="text-text-one text-xl font-extrabold"><span className="text-brand">Dost Küçük</span> Paketi</h2>
-              <div className="mt-[30px] grid gap-y-[9px]">
-                <div className="text-text-one text-[15px]">HER YÖNE</div>
-                <div className="text-text-one text-xl font-extrabold">750 DK</div>
-                <div className="text-text-one text-xl font-extrabold">250 SMS</div>
-                <div className="text-text-one text-xl font-extrabold"><span className="text-brand">3 GB</span> İNTERNET</div>
-              </div>
-              <button className="mt-[30px] bg-brand text-white rounded-[10px] text-2xl font-extrabold py-[3px] px-4">102 ₺</button>
-              <div className="mt-[22px] text-text-one text-xs">DOST KUCUK yaz 4551'e Gönder!</div>
-            </div>
+          {mockData.map((product) => (
+            <ProductCard key={product.id} title={product.title} minute={product.minute} sms={product.sms} internet={product.internet} price={product.price} />
           ))}
         </div>
         <button className="flex items-center gap-x-[15px] bg-white border-2 border-brand rounded-lg py-[10px] px-[15px] mt-[30px] mx-auto">
