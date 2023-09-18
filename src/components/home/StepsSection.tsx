@@ -1,4 +1,5 @@
 import { RightArrowIcon } from "../icons";
+import Link from "next/link";
 
 export default function StepsSection() {
   return (
@@ -68,12 +69,14 @@ export default function StepsSection() {
             </svg>
           </div>
         </div>
-        <button className="flex items-center justify-center gap-x-4 w-[212px] h-[50px] text-text-one font-medium border-2 border-brand rounded-lg bg-white mx-auto">
-          <div>Tarifeler ve Paketler</div>
-          <div>
-            <RightArrowIcon color="#242424" size="24" />
-          </div>
-        </button>
+        <Link href="/products">
+          <button className="flex items-center justify-center gap-x-4 w-[212px] h-[50px] text-text-one font-medium border-2 border-brand rounded-lg bg-white hover:bg-brand hover:text-white transition-all mx-auto">
+            <div>Tarifeler ve Paketler</div>
+            <div>
+              <RightArrowIcon color="#242424" size="24" />
+            </div>
+          </button>
+        </Link>
       </div>
     </section>
   );
